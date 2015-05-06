@@ -1,14 +1,14 @@
 <?php
-namespace yii2mod\cart\widgets;
+namespace shortcutmediaro\cart\widgets;
 
 use yii\base\Widget;
 use yii\data\ArrayDataProvider;
 use yii\helpers\ArrayHelper;
-use yii2mod\cart\Cart;
+use shortcutmediaro\cart\Cart;
 
 /**
  * Class Cart
- * @package yii2mod\cart\widgets
+ * @package shortcutmediaro\cart\widgets
  */
 class CartGrid extends Widget
 {
