@@ -1,9 +1,9 @@
 <?php
-namespace yii2mod\cart\models;
+namespace shortcutmediaro\cart\models;
 
 /**
  * All objects that can be added to the cart must implement this interface
- * @package yii2mod\cart\models
+ * @package shortcutmediaro\cart\models
  */
 interface CartItemInterface
 {
