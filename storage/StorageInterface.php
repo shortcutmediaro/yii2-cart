@@ -1,24 +1,24 @@
 <?php
-namespace yii2mod\cart\storage;
+namespace shortcutmediaro\cart\storage;
 
-use yii2mod\cart\Cart;
+use shortcutmediaro\cart\Cart;
 
 /**
  * Interface StorageInterface
- * @package yii2mod\cart\cart
+ * @package shortcutmediaro\cart\cart
  */
 interface StorageInterface
 {
 
     /**
-     * @param \yii2mod\cart\Cart $cart
+     * @param \shortcutmediaro\cart\Cart $cart
      *
      * @return void
      */
     public function load(Cart $cart);
 
     /**
-     * @param \yii2mod\cart\Cart $cart
+     * @param \shortcutmediaro\cart\Cart $cart
      *
      * @return void
      */
