@@ -1,12 +1,12 @@
 <?php
-namespace yii2mod\cart\storage;
+namespace shortcutmediaro\cart\storage;
 
 use yii\base\InvalidConfigException;
 use yii\base\Object;
 use yii\db\Connection;
 use yii\db\Query;
 use yii\web\User;
-use yii2mod\cart\Cart;
+use shortcutmediaro\cart\Cart;
 
 /**
  * Database-adapter for cart data storage. Assumes the existence of a table similar to:
@@ -16,7 +16,7 @@ use yii2mod\cart\Cart;
  *    PRIMARY KEY (`sessionId`)) ENGINE=InnoDB;
  * If userComponent is set, it tries to call getId() from the component and use the result as user identifier. If it
  * fails, or if $userComponent is not set, it will use sessionId as user identifier
- * @package yii2mod\cart\cart\storage
+ * @package shortcutmediaro\cart\cart\storage
  */
 class DatabaseStorage extends Object implements StorageInterface
 {
@@ -114,7 +114,7 @@ class DatabaseStorage extends Object implements StorageInterface
     }
 
     /**
-     * @param \yii2mod\cart\Cart $cart
+     * @param \shortcutmediaro\cart\Cart $cart
      *
      * @return void
      */
