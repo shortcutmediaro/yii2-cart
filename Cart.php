@@ -1,15 +1,15 @@
 <?php
-namespace yii2mod\cart;
+namespace shortcutmediaro\cart;
 
 use yii\base\Component;
 use yii\base\InvalidParamException;
 use yii\web\Session;
-use yii2mod\cart\models\CartItemInterface;
+use shortcutmediaro\cart\models\CartItemInterface;
 
 /**
  * Provides basic cart functionality (adding, removing, clearing, listing items). You can extend this class and
  * override it in the application configuration to extend/customize the functionality
- * @package yii2mod\cart
+ * @package shortcutmediaro\cart
  * @property int     $count
  * @property Session $session
  */
@@ -19,7 +19,7 @@ class Cart extends Component
     /**
      * @var interface class
      */
-    const ITEM_PRODUCT = '\yii2mod\cart\models\CartItemInterface';
+    const ITEM_PRODUCT = '\shortcutmediaro\cart\models\CartItemInterface';
 
 
     /**
@@ -34,9 +34,9 @@ class Cart extends Component
 
     /**
      * Override this to provide custom (e.g. database) storage for cart data
-     * @var string|\yii2mod\cart\storage\StorageInterface
+     * @var string|\shortcutmediaro\cart\storage\StorageInterface
      */
-    public $storageClass = '\yii2mod\cart\storage\SessionStorage';
+    public $storageClass = '\shortcutmediaro\cart\storage\SessionStorage';
 
     /**
      * @inheritdoc
@@ -58,7 +58,7 @@ class Cart extends Component
      */
     public function reassign($sessionId, $userId)
     {
-        if (get_class($this->getStorage()) === 'yii2mod\cart\storage\DatabaseStorage') {
+        if (get_class($this->getStorage()) === 'shortcutmediaro\cart\storage\DatabaseStorage') {
             if (!empty($this->items)) {
                 $storage = $this->getStorage();
                 $storage->reassign($sessionId, $userId);
@@ -84,7 +84,7 @@ class Cart extends Component
     /**
      * Setter for the storage component
      *
-     * @param \yii2mod\cart\storage\StorageInterface|string $storage
+     * @param \shortcutmediaro\cart\storage\StorageInterface|string $storage
      *
      * @return Cart
      */
@@ -110,7 +110,7 @@ class Cart extends Component
     }
 
     /**
-     * @param \yii2mod\cart\models\CartItemInterface $item
+     * @param \shortcutmediaro\cart\models\CartItemInterface $item
      *
      * @internal param $quantity
      */
@@ -190,7 +190,7 @@ class Cart extends Component
 
 
     /**
-     * @return \yii2mod\cart\storage\StorageInterface|string
+     * @return \shortcutmediaro\cart\storage\StorageInterface|string
      */
     protected function getStorage()
     {
