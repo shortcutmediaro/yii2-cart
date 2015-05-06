@@ -1,13 +1,13 @@
 <?php
-namespace yii2mod\cart\storage;
+namespace shortcutmediaro\cart\storage;
 
 use yii\base\Object;
-use yii2mod\cart\Cart;
+use shortcutmediaro\cart\Cart;
 
 /**
  * Class SessionStorage
  * @property \yii\web\Session session
- * @package yii2mod\cart\cart
+ * @package shortcutmediaro\cart\cart
  */
 class SessionStorage extends Object implements StorageInterface
 {
